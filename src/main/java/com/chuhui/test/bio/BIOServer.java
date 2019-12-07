@@ -1,4 +1,4 @@
-package com.chuhui.test.nio;
+package com.chuhui.test.bio;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,6 +11,7 @@ public class BIOServer {
     public static void main(String[] args) throws IOException {
         ServerSocket serverSocket = new ServerSocket(9098);
 
+        while (true) {
         while (true) {
             Socket socket = serverSocket.accept();
             InputStream inputStream = socket.getInputStream();
